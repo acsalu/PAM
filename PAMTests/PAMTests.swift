@@ -21,16 +21,16 @@ class PAMTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPositiveAffectScore() {
+        let valence: Valence = 4
+        let arousal: Arousal = 1
+        XCTAssertEqual(positiveAffectScore(valence: valence, arousal: arousal), 13)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testNegativeAffectScore() {
+        let valence: Valence = 4
+        let arousal: Arousal = 1
+        XCTAssertEqual(negativeAffectScore(valence: valence, arousal: arousal), 1)
     }
     
 }

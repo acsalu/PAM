@@ -10,6 +10,7 @@
 		909695661D94A24F0040950A /* PAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9096955C1D94A24F0040950A /* PAM.framework */; };
 		9096956B1D94A24F0040950A /* PAMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096956A1D94A24F0040950A /* PAMTests.swift */; };
 		9096956D1D94A24F0040950A /* PAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 9096955F1D94A24F0040950A /* PAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		909695771D94A31A0040950A /* PAMImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909695761D94A31A0040950A /* PAMImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		909695651D94A24F0040950A /* PAMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PAMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9096956A1D94A24F0040950A /* PAMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMTests.swift; sourceTree = "<group>"; };
 		9096956C1D94A24F0040950A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909695761D94A31A0040950A /* PAMImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				9096955F1D94A24F0040950A /* PAM.h */,
 				909695601D94A24F0040950A /* Info.plist */,
+				909695761D94A31A0040950A /* PAMImage.swift */,
 			);
 			path = PAM;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					9096955B1D94A24F0040950A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5LEMESW6GH;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					909695641D94A24F0040950A = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909695771D94A31A0040950A /* PAMImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		909695711D94A24F0040950A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5LEMESW6GH;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.tech.keymochi.pam.PAM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		909695721D94A24F0040950A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5LEMESW6GH;
@@ -360,6 +368,7 @@
 		909695741D94A24F0040950A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5LEMESW6GH;
 				INFOPLIST_FILE = PAMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		909695751D94A24F0040950A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5LEMESW6GH;
 				INFOPLIST_FILE = PAMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
