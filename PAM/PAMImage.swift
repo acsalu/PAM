@@ -79,7 +79,7 @@ public func loadAllImages(valence: Valence, arousal: Arousal) -> ([UIImage])? {
     
     var images = [UIImage]()
     for i in 1...3 {
-        let imagePath = Constant.bundleName.appending("\(emotionIndex)_\(emotionTag)/\(emotionIndex)_\(i)")
+        let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(i)")
         let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
         let imageData = try! Data(contentsOf: url!)
         images.append(UIImage(data: imageData)!)
