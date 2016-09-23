@@ -71,7 +71,7 @@ private func getDirName(valence: Valence, arousal: Arousal) -> String? {
     return "\(emotionIndex)_\(emotionTag)"
 }
 
-class PAMImage {
+public class PAMImage {
     public static func loadAllImages(valence: Valence, arousal: Arousal) -> ([UIImage])? {
         guard let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
                 return nil
