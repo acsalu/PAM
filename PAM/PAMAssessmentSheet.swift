@@ -19,16 +19,17 @@ public enum PAMAssessmentSheetOption: Int {
     
     static let emotionTable: [PAMAssessmentSheetOption: [Emotion]] = [
         .minimum: [
-            (1, 1), (1, 4), (4, 1), (4, 4)
+            Emotion(1, 1)!, Emotion(1, 4)!, Emotion(4, 1)!, Emotion(4, 4)!
         ],
         .intermediate: [
-            (1, 1), (2, 2), (3, 3), (4, 4), (4, 1), (3, 2), (2, 3), (1, 4)
+            Emotion(1, 1)!, Emotion(2, 2)!, Emotion(3, 3)!, Emotion(4, 4)!,
+            Emotion(4, 1)!, Emotion(3, 2)!, Emotion(2, 3)!, Emotion(1, 4)!
         ],
         .full: [
-            (1, 1), (1, 2), (1, 3), (1, 4),
-            (2, 1), (2, 2), (2, 3), (2, 4),
-            (3, 1), (3, 2), (3, 3), (3, 4),
-            (4, 1), (4, 2), (4, 3), (4, 4)
+            Emotion(1, 1)!, Emotion(1, 2)!, Emotion(1, 3)!, Emotion(1, 4)!,
+            Emotion(2, 1)!, Emotion(2, 2)!, Emotion(2, 3)!, Emotion(2, 4)!,
+            Emotion(3, 1)!, Emotion(3, 2)!, Emotion(3, 3)!, Emotion(3, 4)!,
+            Emotion(4, 1)!, Emotion(4, 2)!, Emotion(4, 3)!, Emotion(4, 4)!
         ]
     ]
 }
@@ -57,7 +58,7 @@ public class PAMAssessmentSheet: UIView {
         self.buttons.enumerated().forEach { (offset, button) in
             self.addSubview(button)
             if let emotion = PAMAssessmentSheetOption.emotionTable[option]?[offset] {
-                let image = PAMImage.loadRandomImage(forValence: emotion.valence, andArousal: emotion.arousal)
+                let image = PAMImage.loadRandomImage(forEmotion: emotion)
                 button.setImage(image, for: .normal)
             }
         }

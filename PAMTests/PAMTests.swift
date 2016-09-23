@@ -21,22 +21,27 @@ class PAMTests: XCTestCase {
         super.tearDown()
     }
     
+    func testEmotion() {
+        XCTAssertNil(Emotion(0, 5))
+        XCTAssertNil(Emotion(1, 5))
+        XCTAssertNil(Emotion(4, 0))
+        XCTAssertNotNil(Emotion(4, 4))
+    }
+    
     func testPositiveAffectScore() {
-        let valence: Valence = 4
-        let arousal: Arousal = 1
-        XCTAssertEqual(positiveAffectScore(valence: valence, arousal: arousal), 13)
+        let emotion = Emotion(4, 1)!
+        XCTAssertEqual(emotion.positiveAffectScore, 13)
     }
     
     func testNegativeAffectScore() {
-        let valence: Valence = 4
-        let arousal: Arousal = 1
-        XCTAssertEqual(negativeAffectScore(valence: valence, arousal: arousal), 1)
+        let emotion = Emotion(4, 1)!
+        XCTAssertEqual(emotion.negativeAffectScore, 1)
     }
     
     func testEmotionTag() {
         for valence: UInt8 in 1...4 {
             for arousal: UInt8 in 1...4 {
-                XCTAssertNotNil(getEmotionTag(valence: valence, arousal: arousal))
+                XCTAssertNotNil(Emotion(valence, arousal)?.tag)
             }
         }
     }
@@ -44,7 +49,7 @@ class PAMTests: XCTestCase {
     func testEmotionIndex() {
         for valence: UInt8 in 1...4 {
             for arousal: UInt8 in 1...4 {
-                XCTAssertNotNil(getEmotionIndex(valence: valence, arousal: arousal))
+                XCTAssertNotNil(Emotion(valence, arousal)?.index)
             }
         }
     }

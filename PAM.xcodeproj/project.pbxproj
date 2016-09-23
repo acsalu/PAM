@@ -12,6 +12,7 @@
 		9096956D1D94A24F0040950A /* PAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 9096955F1D94A24F0040950A /* PAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		909695771D94A31A0040950A /* PAMImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909695761D94A31A0040950A /* PAMImage.swift */; };
 		90C43E191D957C60000D1CA2 /* PAMAssessmentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C43E181D957C60000D1CA2 /* PAMAssessmentSheet.swift */; };
+		90C43E1B1D958B4B000D1CA2 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C43E1A1D958B4B000D1CA2 /* Emotion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		9096956C1D94A24F0040950A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909695761D94A31A0040950A /* PAMImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMImage.swift; sourceTree = "<group>"; };
 		90C43E181D957C60000D1CA2 /* PAMAssessmentSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMAssessmentSheet.swift; sourceTree = "<group>"; };
+		90C43E1A1D958B4B000D1CA2 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				9096955F1D94A24F0040950A /* PAM.h */,
 				909695601D94A24F0040950A /* Info.plist */,
+				90C43E1A1D958B4B000D1CA2 /* Emotion.swift */,
 				909695761D94A31A0040950A /* PAMImage.swift */,
 				90C43E181D957C60000D1CA2 /* PAMAssessmentSheet.swift */,
 			);
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C43E191D957C60000D1CA2 /* PAMAssessmentSheet.swift in Sources */,
+				90C43E1B1D958B4B000D1CA2 /* Emotion.swift in Sources */,
 				909695771D94A31A0040950A /* PAMImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
