@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PAM"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A short description of PAM."
   s.homepage     = "https://github.com/Keymochi/PAM"
   s.license      = { :type => "MIT" }

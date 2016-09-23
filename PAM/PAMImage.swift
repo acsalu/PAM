@@ -9,7 +9,7 @@
 import Foundation
 
 private enum Constant {
-    static let bundleName = "ResourceBundle.bundle"
+    static let bundleName = "Frameworks/PAM.framework/ResourceBundle.bundle"
     static let imageExtension = "jpg"
 }
 
