@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol PAMAssessmentSheetDelegate {
-    func assessmentSheet(didSelectEmotion emotion: Emotion)
+    func assessmentSheet(_: PAMAssessmentSheet, didSelectEmotion emotion: Emotion)
 }
 
 public enum PAMAssessmentSheetOption: Int {
@@ -72,6 +72,6 @@ public class PAMAssessmentSheet: UIView {
         guard let emotion = PAMAssessmentSheetOption.emotionTable[self.option]?[index] else {
             return
         }
-        self.delegate?.assessmentSheet(didSelectEmotion: emotion)
+        self.delegate?.assessmentSheet(self, didSelectEmotion: emotion)
     }
 }
