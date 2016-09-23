@@ -8,13 +8,11 @@
 
 import Foundation
 
-public typealias Valence = UInt8
-public typealias Arousal = UInt8
 public struct Emotion {
-    let valence: Valence
-    let arousal: Arousal
+    let valence: UInt8
+    let arousal: UInt8
     
-    public init?(_ valence: Valence, _ arousal: Arousal) {
+    public init?(_ valence: UInt8, _ arousal: UInt8) {
         guard 1 <= valence && valence <= 4 && 1 <= arousal && arousal <= 4 else {
             return nil
         }
@@ -38,7 +36,8 @@ public struct Emotion {
         return (4 - arousal) * 4 + valence
     }
     
-    private static let emotionTagDict: [Arousal:[Valence: String]] = [
+    // [Arousal: [Valence: Tag]]
+    private static let emotionTagDict: [UInt8:[UInt8: String]] = [
         4: [
             1: "afraid",
             2: "tense",
