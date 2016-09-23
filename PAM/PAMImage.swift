@@ -13,6 +13,7 @@ private enum Constant {
     static let imageExtension = "jpg"
 }
 
+public typealias Emotion = (valence: Valence, arousal: Arousal)
 public typealias Valence = UInt8
 public typealias Arousal = UInt8
 
