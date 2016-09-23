@@ -35,7 +35,7 @@ public enum PAMAssessmentSheetOption: Int {
 
 public class PAMAssessmentSheet: UIView {
     var buttons = [UIButton]()
-    var delegate: PAMAssessmentSheetDelegate?
+    public var delegate: PAMAssessmentSheetDelegate?
     var option: PAMAssessmentSheetOption!
     
     required public init?(coder aDecoder: NSCoder) {
@@ -49,7 +49,7 @@ public class PAMAssessmentSheet: UIView {
         let width = frame.size.width
         let buttonWidth = width / CGFloat(option.rawValue)
         for i in 0..<option.rawValue {
-            let button = UIButton(frame: CGRect(x: width * CGFloat(i), y: 0.0, width: buttonWidth, height: buttonWidth))
+            let button = UIButton(frame: CGRect(x: buttonWidth * CGFloat(i), y: 0.0, width: buttonWidth, height: buttonWidth))
             button.addTarget(self, action: #selector(buttonSelected(sender:)), for: .touchUpInside)
             self.buttons.append(button)
         }
