@@ -57,7 +57,7 @@ public func getEmotionTag(valence: Valence, arousal: Arousal) -> String? {
 
 public func getEmotionIndex(valence: Valence, arousal: Arousal) -> UInt8? {
     let index = (4 - arousal) * 4 + valence
-    if index > 1 && index < 16 {
+    if index >= 1 && index <= 16 {
         return index
     }
     return nil

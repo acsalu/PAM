@@ -33,4 +33,19 @@ class PAMTests: XCTestCase {
         XCTAssertEqual(negativeAffectScore(valence: valence, arousal: arousal), 1)
     }
     
+    func testEmotionTag() {
+        for valence: UInt8 in 1...4 {
+            for arousal: UInt8 in 1...4 {
+                XCTAssertNotNil(getEmotionTag(valence: valence, arousal: arousal))
+            }
+        }
+    }
+    
+    func testEmotionIndex() {
+        for valence: UInt8 in 1...4 {
+            for arousal: UInt8 in 1...4 {
+                XCTAssertNotNil(getEmotionIndex(valence: valence, arousal: arousal))
+            }
+        }
+    }
 }
