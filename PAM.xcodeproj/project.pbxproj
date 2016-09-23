@@ -410,6 +410,7 @@
 				909695721D94A24F0040950A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		909695731D94A24F0040950A /* Build configuration list for PBXNativeTarget "PAMTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +419,7 @@
 				909695751D94A24F0040950A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

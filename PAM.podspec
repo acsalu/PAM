@@ -11,4 +11,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Keymochi/PAM.git", :tag => "#{s.version}" }
 
   s.source_files  = "PAM/*.swift"
+
+  s.ios.resource_bundle = { 'ResourceBundle' => 'PAM/Images/**/*.jpg' }
 end
