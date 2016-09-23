@@ -71,19 +71,37 @@ private func getDirName(valence: Valence, arousal: Arousal) -> String? {
     return "\(emotionIndex)_\(emotionTag)"
 }
 
-public func loadAllImages(valence: Valence, arousal: Arousal) -> ([UIImage])? {
-    guard let emotionTag = getEmotionTag(valence: valence, arousal: arousal),
-        let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
-            return nil
+class PAMImage {
+    public static func loadAllImages(valence: Valence, arousal: Arousal) -> ([UIImage])? {
+        guard let emotionTag = getEmotionTag(valence: valence, arousal: arousal),
+            let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
+                return nil
+        }
+        
+        var images = [UIImage]()
+        for i in 1...3 {
+            let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(i)")
+            let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
+            let imageData = try! Data(contentsOf: url!)
+            images.append(UIImage(data: imageData)!)
+        }
+        
+        return images
     }
     
-    var images = [UIImage]()
-    for i in 1...3 {
+    public static func loadImage(forValence valence: Valence, andArousal arousal: Arousal, atIndex index: Int) -> UIImage? {
+        guard let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
+                return nil
+        }
         let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(i)")
         let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
         let imageData = try! Data(contentsOf: url!)
-        images.append(UIImage(data: imageData)!)
+        
+        return UIImage(data: imageData)
     }
     
-    return images
+    public static func loadRandomImage(forValence: Valence, andArousal arousal: Arousal) -> UIImage? {
+        let index = Int(arc4random_uniform(3) + 1)
+        return loadImage(forValence: valence, andArousal: arousal, atIndex: index)
+    }
 }
