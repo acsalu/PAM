@@ -73,8 +73,7 @@ private func getDirName(valence: Valence, arousal: Arousal) -> String? {
 
 class PAMImage {
     public static func loadAllImages(valence: Valence, arousal: Arousal) -> ([UIImage])? {
-        guard let emotionTag = getEmotionTag(valence: valence, arousal: arousal),
-            let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
+        guard let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
                 return nil
         }
         
@@ -93,14 +92,14 @@ class PAMImage {
         guard let emotionIndex = getEmotionIndex(valence: valence, arousal: arousal) else {
                 return nil
         }
-        let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(i)")
+        let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(index)")
         let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
         let imageData = try! Data(contentsOf: url!)
         
         return UIImage(data: imageData)
     }
     
-    public static func loadRandomImage(forValence: Valence, andArousal arousal: Arousal) -> UIImage? {
+    public static func loadRandomImage(forValence valence: Valence, andArousal arousal: Arousal) -> UIImage? {
         let index = Int(arc4random_uniform(3) + 1)
         return loadImage(forValence: valence, andArousal: arousal, atIndex: index)
     }
