@@ -11,8 +11,8 @@ import Foundation
 public typealias Valence = UInt8
 public typealias Arousal = UInt8
 public struct Emotion {
-    let valence: Valence
-    let arousal: Arousal
+    public let valence: Valence
+    public let arousal: Arousal
     
     public init?(_ valence: Valence, _ arousal: Arousal) {
         guard 1 <= valence && valence <= 4 && 1 <= arousal && arousal <= 4 else {
