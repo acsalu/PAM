@@ -38,7 +38,7 @@ public struct Emotion {
         return (4 - arousal) * 4 + valence
     }
     
-    private static let emotionTagDict: [Arousal:[Valence: String]] = [
+    fileprivate static let emotionTagDict: [Arousal:[Valence: String]] = [
         4: [
             1: "afraid",
             2: "tense",

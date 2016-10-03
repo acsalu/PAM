@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9089A5151DA2BA8500344A92 /* PAMEmotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089A5141DA2BA8500344A92 /* PAMEmotionCell.swift */; };
 		909695661D94A24F0040950A /* PAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9096955C1D94A24F0040950A /* PAM.framework */; };
 		9096956B1D94A24F0040950A /* PAMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096956A1D94A24F0040950A /* PAMTests.swift */; };
 		9096956D1D94A24F0040950A /* PAM.h in Headers */ = {isa = PBXBuildFile; fileRef = 9096955F1D94A24F0040950A /* PAM.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9089A5141DA2BA8500344A92 /* PAMEmotionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMEmotionCell.swift; sourceTree = "<group>"; };
 		9096955C1D94A24F0040950A /* PAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9096955F1D94A24F0040950A /* PAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAM.h; sourceTree = "<group>"; };
 		909695601D94A24F0040950A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				90C43E1A1D958B4B000D1CA2 /* Emotion.swift */,
 				909695761D94A31A0040950A /* PAMImage.swift */,
 				90C43E181D957C60000D1CA2 /* PAMAssessmentSheet.swift */,
+				9089A5141DA2BA8500344A92 /* PAMEmotionCell.swift */,
 			);
 			path = PAM;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 					909695641D94A24F0040950A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5LEMESW6GH;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -208,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9089A5151DA2BA8500344A92 /* PAMEmotionCell.swift in Sources */,
 				90C43E191D957C60000D1CA2 /* PAMAssessmentSheet.swift in Sources */,
 				90C43E1B1D958B4B000D1CA2 /* Emotion.swift in Sources */,
 				909695771D94A31A0040950A /* PAMImage.swift in Sources */,
