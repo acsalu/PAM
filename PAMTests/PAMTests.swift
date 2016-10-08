@@ -49,7 +49,7 @@ class PAMTests: XCTestCase {
     func testEmotionIndex() {
         for valence: UInt8 in 1...4 {
             for arousal: UInt8 in 1...4 {
-                XCTAssertNotNil(Emotion(valence, arousal)?.index)
+                XCTAssertNotNil(Emotion(valence, arousal)?.position)
             }
         }
     }

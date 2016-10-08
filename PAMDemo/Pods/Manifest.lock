@@ -1,0 +1,16 @@
+PODS:
+  - PAM (0.0.14-b)
+
+DEPENDENCIES:
+  - PAM (from `../`)
+
+EXTERNAL SOURCES:
+  PAM:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PAM: 9b8627ad1819d1a434865a47c4cfa6280e9f4dca
+
+PODFILE CHECKSUM: 4b24fc1280bc05abf5d9486bc145b39e59edab84
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,6 @@
+framework module Pods_PAMDemoTests {
+  umbrella header "Pods-PAMDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
