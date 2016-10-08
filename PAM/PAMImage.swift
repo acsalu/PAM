@@ -15,10 +15,10 @@ private enum Constant {
 
 open class PAMImage {
     open static func loadAllImages(_ emotion: Emotion) -> [UIImage] {
-        let emotionIndex = emotion.index
+        let position = emotion.position
         var images = [UIImage]()
         for i in 1...3 {
-            let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(i)")
+            let imagePath = Constant.bundleName.appending("/\(position)_\(i)")
             let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
             let imageData = try! Data(contentsOf: url!)
             images.append(UIImage(data: imageData)!)
@@ -28,7 +28,7 @@ open class PAMImage {
     }
     
     open static func loadImage(forEmotion emotion: Emotion, atIndex index: Int) -> UIImage {
-        let emotionIndex = emotion.index
+        let emotionIndex = emotion.position
         let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(index)")
         let url = Bundle.main.url(forResource: imagePath, withExtension: Constant.imageExtension)
         let imageData = try! Data(contentsOf: url!)

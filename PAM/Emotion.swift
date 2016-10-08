@@ -10,6 +10,8 @@ import Foundation
 
 public typealias Valence = UInt8
 public typealias Arousal = UInt8
+public typealias Position = UInt8
+
 public struct Emotion {
     public let valence: Valence
     public let arousal: Arousal
@@ -20,6 +22,16 @@ public struct Emotion {
         }
         self.valence = valence
         self.arousal = arousal
+    }
+    
+    public init?(position: Position) {
+        guard 1 <= position && position <= 16 else {
+            return nil
+        }
+        let valence = Valence(position % 4 == 0 ? 4 : position % 4)
+        let a = position - valence
+        let arousal = Arousal(4 - a / 4)
+        self.init(valence, arousal)
     }
     
     public var positiveAffectScore: UInt8 {
@@ -34,7 +46,7 @@ public struct Emotion {
         return (Emotion.emotionTagDict[arousal]?[valence]!)!
     }
     
-    public var index: UInt8 {
+    public var position: Position {
         return (4 - arousal) * 4 + valence
     }
     

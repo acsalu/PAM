@@ -12,7 +12,11 @@ class PAMEmotionCell: UICollectionViewCell {
     private var _imageView: UIImageView?
     var imageView: UIImageView {
         if _imageView == nil {
-            _imageView = UIImageView.init(frame: contentView.bounds)
+            let newImageView = UIImageView.init(frame: contentView.bounds)
+            newImageView.contentMode = .scaleAspectFill
+            newImageView.clipsToBounds = true
+            self.addSubview(newImageView)
+            _imageView = newImageView
         }
         return _imageView!
     }
