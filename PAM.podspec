@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PAM"
-  s.version      = "0.0.14"
+  s.version      = "0.0.15"
   s.summary      = "A protable implementation of Photographic Affect Meter (PAM)"
   s.homepage     = "https://github.com/Keymochi/PAM"
   s.license      = { :type => "MIT" }
