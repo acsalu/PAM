@@ -28,7 +28,7 @@ open class PAMImage {
     }
     
     open static func loadImage(forEmotion emotion: Emotion, atIndex index: Int) -> UIImage {
-        let emotionIndex = emotion.positioni
+        let emotionIndex = emotion.position
         let imagePath = Constant.bundleName.appending("/\(emotionIndex)_\(index)")
         let bundle = Bundle(identifier: "org.cocoapods.PAM")!
         let url = bundle.url(forResource: imagePath, withExtension: Constant.imageExtension)
