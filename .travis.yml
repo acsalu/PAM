@@ -1,2 +1,5 @@
 language: objective-c
-podfie: PAMDemo/Podfile
+osx_image: xcode8
+podfie: PAMDemo/Podfilei
+workspace: PAMDemo/PAMDemo.xcworkspace
+scheme: PAMDemoTests
