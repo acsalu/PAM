@@ -1,5 +1,5 @@
 PODS:
-  - PAM (0.0.14)
+  - PAM (0.0.15)
 
 DEPENDENCIES:
   - PAM (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PAM: 014d5fcd9c1083d5a91b9fb6a3159f6d1e8255b4
+  PAM: 39ed55b8d1b397950258bee4772f9ea1ea051fab
 
 PODFILE CHECKSUM: 4b24fc1280bc05abf5d9486bc145b39e59edab84
 
